@@ -11,6 +11,7 @@ export default function PredictUpload() {
     confidence: number;
   } | null>(null);
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files.length > 0) {
@@ -26,6 +27,8 @@ export default function PredictUpload() {
       setError("Please upload a video file.");
       return;
     }
+
+    setLoading(true);
 
     const formData = new FormData();
     formData.append("file", file);
@@ -47,6 +50,8 @@ export default function PredictUpload() {
     } catch (err) {
       setError("An error occurred while uploading the video.");
       console.error(err);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -57,15 +62,23 @@ export default function PredictUpload() {
         Facial Deepfake Detection
       </div>
       <div className="grid justify-center">
-        <h1 className="flex justify-center mb-6">Upload Video for Prediction</h1>
+        <h1 className="flex justify-center mb-6">
+          Upload Video for Prediction
+        </h1>
         <p className="max-w-2xl mx-auto mb-4">
-        Facial deepfake detection is an essential task in combating digital misinformation, fraud, and identity manipulation. 
-          Our AI-powered system detects multiple types of deepfakes, including Deepfake, Face2Face, FaceSwap, and Neural Textures. 
-          By analyzing video frames, we extract facial features at different compression levels and leverage Gaussian Processes (GPs) 
-          for classification. This approach enhances uncertainty estimation, reduces prediction errors, and ensures high accuracy. 
-          Additionally, our model integrates the Generative Convolutional Vision Transformer (GenConViT), which combines convolutional 
-          and transformer-based architectures to capture both local and global inconsistencies in deepfake videos. This hybrid framework 
-          significantly improves detection performance, making our system robust across multiple datasets and capable of identifying 
+          Facial deepfake detection is an essential task in combating digital
+          misinformation, fraud, and identity manipulation. Our AI-powered
+          system detects multiple types of deepfakes, including Deepfake,
+          Face2Face, FaceSwap, and Neural Textures. By analyzing video frames,
+          we extract facial features at different compression levels and
+          leverage Gaussian Processes (GPs) for classification. This approach
+          enhances uncertainty estimation, reduces prediction errors, and
+          ensures high accuracy. Additionally, our model integrates the
+          Generative Convolutional Vision Transformer (GenConViT), which
+          combines convolutional and transformer-based architectures to capture
+          both local and global inconsistencies in deepfake videos. This hybrid
+          framework significantly improves detection performance, making our
+          system robust across multiple datasets and capable of identifying
           deepfakes even in scenarios with limited training data.
         </p>
         <form onSubmit={handleSubmit}>
@@ -77,8 +90,9 @@ export default function PredictUpload() {
             </Button>
           </div>
         </form>
-        
+
         {error && <p style={{ color: "red" }}>{error}</p>}
+        {loading && <p>Predicting...</p>}
         {response && (
           <div className="predection">
             <h2>Prediction Result</h2>

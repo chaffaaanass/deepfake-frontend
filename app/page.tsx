@@ -26,13 +26,18 @@ export default function Home() {
       <p className="parag max-w-xl">
         Facial deepfake detection is an essential task in combating digital
         misinformation, fraud, and identity manipulation. Our AI-powered system
-        detects four types of deepfakes: Deepfake, Face2Face, FaceSwap, and
-        Neural Textures. By analyzing video frames, we extract facial features
-        at different compression levels and leverage Gaussian Processes (GPs)
-        for classification. This approach enhances uncertainty estimation,
-        reduces prediction errors, and ensures high accuracy. Our model performs
-        competitively across datasets and excels in detecting deepfakes even
-        with limited training data.{" "}
+        detects multiple types of deepfakes, including Deepfake, Face2Face,
+        FaceSwap, and Neural Textures. By analyzing video frames, we extract
+        facial features at different compression levels and leverage Gaussian
+        Processes (GPs) for classification. This approach enhances uncertainty
+        estimation, reduces prediction errors, and ensures high accuracy.
+        Additionally, our model integrates the Generative Convolutional Vision
+        Transformer (GenConViT), which combines convolutional and
+        transformer-based architectures to capture both local and global
+        inconsistencies in deepfake videos. This hybrid framework significantly
+        improves detection performance, making our system robust across multiple
+        datasets and capable of identifying deepfakes even in scenarios with
+        limited training data.
       </p>
       <Button
         variant="secondary"
@@ -487,41 +492,41 @@ export default function Home() {
             <Image src={GenExp2} alt="Meso-GP Model" className="class2" />
           </div>
           <div className="container">
-          <h2>Experiments & Performance</h2>
-          <p>
-            The model’s accuracy was evaluated using multiple datasets and
-            performance metrics.
-          </p>
-          <ul>
-            <li>
-              <b>Classification Accuracy:</b>
-              <ul>
-                <li>
-                  DFDC: <b>98.5%</b>, FF++: <b>97%</b>, Celeb-DF (v2):{" "}
-                  <b>90.94%</b>.
-                </li>
-              </ul>
-            </li>
-            <li>
-              <b>AUC Scores:</b> Measures the model’s ability to discriminate
-              between real and fake samples.
-              <ul>
-                <li>
-                  DFDC: <b>99.9%</b>, FF++: <b>99.6%</b>, Celeb-DF (v2):{" "}
-                  <b>98.1%</b>.
-                </li>
-              </ul>
-            </li>
-            <li>
-              <b>Baseline Comparison:</b> GenConViT outperforms models like{" "}
-              <b>EfficientNet, CViT, and STDT</b> in accuracy and robustness.
-            </li>
-            <li>
-              <b>Generalization Performance:</b> Maintains high accuracy across{" "}
-              <b>multiple datasets</b>, reducing dataset bias in deepfake
-              detection.
-            </li>
-          </ul>
+            <h2>Experiments & Performance</h2>
+            <p>
+              The model’s accuracy was evaluated using multiple datasets and
+              performance metrics.
+            </p>
+            <ul>
+              <li>
+                <b>Classification Accuracy:</b>
+                <ul>
+                  <li>
+                    DFDC: <b>98.5%</b>, FF++: <b>97%</b>, Celeb-DF (v2):{" "}
+                    <b>90.94%</b>.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <b>AUC Scores:</b> Measures the model’s ability to discriminate
+                between real and fake samples.
+                <ul>
+                  <li>
+                    DFDC: <b>99.9%</b>, FF++: <b>99.6%</b>, Celeb-DF (v2):{" "}
+                    <b>98.1%</b>.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <b>Baseline Comparison:</b> GenConViT outperforms models like{" "}
+                <b>EfficientNet, CViT, and STDT</b> in accuracy and robustness.
+              </li>
+              <li>
+                <b>Generalization Performance:</b> Maintains high accuracy
+                across <b>multiple datasets</b>, reducing dataset bias in
+                deepfake detection.
+              </li>
+            </ul>
           </div>
         </div>
       </div>
