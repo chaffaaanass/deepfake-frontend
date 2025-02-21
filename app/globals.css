@@ -68,6 +68,40 @@
     --chart-5: 340 75% 55%;
   }
 }
+.header{
+  display: flex;
+  font-weight: bold;
+  font-size: 15px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  position: fixed;
+  z-index: 1000;
+  padding: 30px 100px 25px 100px;
+  top: 0;
+  background-color: black;
+  white-space: nowrap;
+}
+.header .h-content{
+  margin-left: 900px;
+  display: flex;
+}
+.header .h-content a{
+  margin-left: 30px;
+}
+#architecture{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.home {
+  margin-top: 50px;
+}
+.text {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.parag {
+  margin-bottom: 30px;
+}
 .predection {
   display: grid;
   justify-content: center;
@@ -78,14 +112,312 @@
   border-radius: 10px;
   justify-items: center;
 }
-form{
+form {
   margin: 20px;
   padding: 10px;
   border-radius: 10px;
   background-color: white;
 }
 input {
-  color: black
+  color: black;
+}
+.architecture-gp {
+  display: flex;
+  justify-content: space-around;
+  background-color: #d7dadc;
+  color: black;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.architecture-gp h2 {
+  margin: 150px;
+  font-weight: bold;
+  font-size: 40px;
+}
+.architecture-gp p {
+  margin: 150px;
+}
+.proposed-method {
+  margin-top: 20px;
+  display: grid;
+}
+.proposed-method img {
+  border-radius: 10px;
+  height: 200px;
+}
+.meso-gp {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-bottom: 20px;
+}
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: left;
+}
+h1,
+h2 {
+  font-weight: bold;
+}
+ul {
+  padding-left: 20px;
+}
+.face-extraction {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  background-color: #d7dadc;
+  color: black;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.face-extraction h2 {
+  margin: 150px;
+  font-weight: bold;
+  font-size: 40px;
+}
+.backbone {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  background-color: #d7dadc;
+  color: black;
+  align-items: center;
+}
+.backbone h2 {
+  margin: 150px;
+  font-weight: bold;
+  font-size: 40px;
+}
+.feature-backbone {
+  margin-top: 1px;
+  display: flex;
+  justify-content: space-around;
+  background-color: #d7dadc;
+  color: black;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.feature-backbone h2 {
+  margin: 150px;
+  font-weight: bold;
+  font-size: 40px;
+}
+.meso-gp .explain .content {
+  text-align: left;
+  margin-left: 350px;
+}
+.preprocessing {
+  display: flex;
+  margin-bottom: 20px;
+}
+.preprocessing img {
+  height: 300px;
+  width: 600px;
+  margin-left: 30px;
+  margin-right: 100px;
+}
+.classification{
+  display: flex;
+  flex-direction: row-reverse;
+  margin-bottom: 40px;
+}
+.classification .classfis .class1{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-right: 800px;
+}
+.classification .classfis .class2{
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-right: 800px;
+}
+.experiments{
+  display: flex;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.experiments .classfis .class1{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  height: 500px;
+  width: 600px;
+  margin-left: 30px;
+  margin-right: 700px;
+}
+.experiments .classfis .class2{
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height: 300px;
+  width: 600px;
+  margin-left: 30px;
+  margin-right: 700px;
+}
+.experiments .classfis img{
+  border-radius: 0px;
+}
+.baseline-methods {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  background-color: #d7dadc;
+  color: black;
+  align-items: center;
+}
+.baseline-methods h2 {
+  margin: 150px;
+  font-weight: bold;
+  font-size: 40px;
+}
+.baseline-methods .content {
+  margin-right: 30px;
+}
+.classification-accuracy {
+  margin-top: 1px;
+  display: flex;
+  justify-content: space-around;
+  background-color: #d7dadc;
+  color: black;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.classification-accuracy h2 {
+  margin: 150px;
+  font-weight: bold;
+  font-size: 40px;
+}
+.classification-accuracy .content {
+  margin-right: 30px;
+}
+.cross-dataset-evaluation{
+  display: flex;
+  flex-direction: row-reverse;
+  margin-bottom: 40px; 
+}
+.cross-dataset-evaluation img{
+  border-radius: 10px;
+  height: 400px;
+  margin-right: 70px;
+  margin-left: 50px;
+}
+.training-dataset-sizes{
+  display: flex;
+  margin-bottom: 40px; 
+}
+.training-dataset-sizes img{
+  border-radius: 10px;
+  height: 333.5px;
+  margin-left: 40px;
+  margin-right: 50px;
+}
+#GenConViT {
+  margin-bottom: 0px;
+}
+.video-preprocessing {
+  margin-top: 1px;
+  display: flex;
+  justify-content: space-around;
+  background-color: #d7dadc;
+  color: black;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.video-preprocessing h2 {
+  margin: 150px;
+  font-weight: bold;
+  font-size: 40px;
+}
+.autoencoder {
+  display: flex;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.autoencoder .classfis .class1{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  height: 500px;
+  width: 650px;
+  margin-left: 30px;
+  margin-right: 700px;
+}
+.autoencoder .classfis .class2{
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  height: 300px;
+  width: 650px;
+  margin-left: 30px;
+  margin-right: 700px;
+}
+.autoencoder .classfis .class3{
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height: 300px;
+  width: 650px;
+  margin-left: 30px;
+  margin-right: 700px;
+}
+.swim {
+  display: flex;
+  justify-content: space-around;
+  background-color: #d7dadc;
+  color: black;
+  align-items: center;
+}
+.swim h2 {
+  margin: 150px;
+  font-weight: bold;
+  font-size: 40px;
+}
+.datasets {
+  margin-top: 1px;
+  display: flex;
+  justify-content: space-around;
+  background-color: #d7dadc;
+  color: black;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.datasets h2 {
+  margin: 150px;
+  font-weight: bold;
+  font-size: 40px;
+}
+.gen-experiments {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-bottom: 40px;
+}
+.gen-experiments .classfis .class1{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-left: 1px;
+  width: 361px;
+}
+.gen-experiments .classfis .class2{
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-right: 300px;
+  width: 362px;
 }
 @layer base {
   * {

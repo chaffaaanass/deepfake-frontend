@@ -1,5 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
+import Header from "./ui/header";
 import React, { useState } from "react";
 import axios from "axios";
 
@@ -50,12 +51,13 @@ export default function PredictUpload() {
   };
 
   return (
-    <section>
+    <section className="home flex flex-col items-center text-center">
+      <Header />
       <div className="text flex justify-center p-8 text-[60px]">
         Facial Deepfake Detection
       </div>
       <div className="grid justify-center">
-        <h1 className="flex justify-center">Upload Video for Prediction</h1>
+        <h1 className="flex justify-center mb-6">Upload Video for Prediction</h1>
         <p className="max-w-2xl mx-auto mb-4">
           Facial deepfake detection is an essential task in combating digital
           misinformation, fraud, and identity manipulation. Our AI-powered
@@ -76,6 +78,7 @@ export default function PredictUpload() {
             </Button>
           </div>
         </form>
+        
         {error && <p style={{ color: "red" }}>{error}</p>}
         {response && (
           <div className="predection">
